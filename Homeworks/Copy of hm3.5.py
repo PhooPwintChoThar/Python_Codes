@@ -1,0 +1,50 @@
+import turtle
+print("For first point p1")
+x1=float(input("\tx : "))
+y1=float(input("\ty : "))
+
+print("For second point p2")
+x2=float(input("\tx : "))
+y2=float(input("\ty : "))
+
+print("For third point p3")
+x3=float(input("\tx : "))
+y3=float(input("\ty : "))
+
+area=round(0.5*abs((x1*(y2-y3))+(x2*(y3-y1))+(x3*(y1-y2))), 2)
+
+turtle.penup()
+turtle.goto(x1-25,y1)
+turtle.color("blue")
+turtle.write(f"x1:{x1} , y1: {y1}")
+turtle.color("black")
+turtle.goto(x1,y1)
+turtle.pendown()
+turtle.goto(x2,y2)
+turtle.penup()
+turtle.goto(x2-25,y2)
+turtle.color("blue")
+turtle.write(f"x2:{x2} , y2: {y2}")
+turtle.color("black")
+turtle.goto(x2,y2)
+turtle.pendown()
+turtle.goto(x3,y3)
+turtle.penup()
+turtle.goto(x3,y3+3)
+turtle.color("blue")
+turtle.write(f"x3:{x3} , y3: {y3}")
+turtle.color("black")
+turtle.goto(x3,y3)
+turtle.pendown()
+turtle.goto(x1,y1)
+turtle.penup()
+turtle.goto(x1,y1-15)
+turtle.color("green")
+turtle.write(f"Area is {area} square unit")
+turtle.color("black")
+turtle.goto(x1,y1)
+turtle.done()
+
+
+
+
